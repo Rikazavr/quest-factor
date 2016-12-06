@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import "normalize";
+
+// css ластик
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+:focus {
+	outline: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+// end
+
+$main-text: #5d5778;
+$main-blue: #4ba3f5;
+$main-red: #fc2f56;
+
+html{
+  height: 100%;
+  background: #1e1c28;
+	background: linear-gradient(#371e2d 25%, #1e1c28 100%);
+}
+
+body {
+	line-height: 1;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+.stripes{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+}
+
+// убрать при ширине меньше 1170
+.stripe{
+  height: 100%;
+  width: 16.6%;
+}
+
+.stripes .stripe:not(:last-child){
+  border-right: 1px solid #fff;
+  opacity: 0.1;
+}
+
+.container{
+  position: relative;
+  z-index: 1;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.main-menu{
+  width: 100%;
+  // position: fixed;
+  position: relative;
+  z-index: 1;
+  line-height: 45px;
+  background: #1e1c28;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-text;
+}
+
+.main-menu li{
+  display: inline-block;
+  width: 20%;
+}
+
+.main-menu a{
+  display: block;
+  height: 100%;
+  // border: 1px solid #fff;
+}
+
+.main-menu a:hover{
+  color: $main-blue;
+  background: radial-gradient(circle closest-corner at 50% -130px, rgba(35, 179, 253, 0.3), transparent);
+}
+
+.header{
+  height: 785px;
+  text-align: center;
+  color: $main-red;
+}
+
