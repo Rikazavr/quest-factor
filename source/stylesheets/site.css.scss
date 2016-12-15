@@ -1,79 +1,46 @@
 @charset "utf-8";
 @import "normalize";
+@import "fonts";
 
-// css ластик
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-family: inherit;
-	vertical-align: baseline;
-}
-
-:focus {
-	outline: 0;
-}
-
-ol, ul {
-	list-style: none;
-}
-
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	text-align: left;
-	font-weight: normal;
-}
-
-a{
-  text-decoration: none;
-  color: inherit;
-}
-
-// end
+// colors
 
 $main-text: #5d5778;
 $main-blue: #4ba3f5;
 $main-red: #fc2f56;
+$dark-purple: #1a1822;
+$plum: #5d5778;
+
+// end
 
 html{
-  height: 100%;
   background: #1e1c28;
-	background: linear-gradient(#371e2d 25%, #1e1c28 100%);
+  background-image: url(../images/top-gradient.png), url(../images/gradient.png), url(../images/angle-gradient.png), url(../images/right-angle-gradient.png),  url(../images/footer-image.jpg), linear-gradient(#371e2d 5%, #1e1c28 55%);
+  background-position: top center, 100% 3%, bottom left, right bottom , bottom;
+  background-repeat: no-repeat;
 }
 
 body {
-	line-height: 1;
-	color: #fff;
-	font-family: sans-serif;
-	font-size: 16px;
+	font: normal normal 16px/1 'Gotham Pro', sans-serif;
+	color: $plum;
+	padding-top: 45px;
+}
+
+h1{
+  margin: 0;
 }
 
 .stripes{
+  position: fixed;
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
-  position: absolute;
   z-index: 0;
 }
 
 // убрать при ширине меньше 1170
 .stripe{
   height: 100%;
-  width: 16.6%;
+  width: 16.5%;
 }
 
 .stripes .stripe:not(:last-child){
@@ -81,7 +48,8 @@ body {
   opacity: 0.1;
 }
 
-.container{
+.container,
+.title {
   position: relative;
   z-index: 1;
   width: 1170px;
@@ -90,9 +58,9 @@ body {
 
 .main-menu{
   width: 100%;
-  // position: fixed;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  z-index: 4;
   line-height: 45px;
   background: #1e1c28;
   font-size: 0.9em;
@@ -110,7 +78,6 @@ body {
 .main-menu a{
   display: block;
   height: 100%;
-  // border: 1px solid #fff;
 }
 
 .main-menu a:hover{
@@ -119,8 +86,357 @@ body {
 }
 
 .header{
-  height: 785px;
+  position: relative;
+  z-index: 3;
+  width: 1170px;
+  margin: 0 auto;
   text-align: center;
+  font-weight: 900;
   color: $main-red;
 }
 
+.neon{
+  text-shadow: 0px 0px 15px $main-red;
+}
+
+.phone,
+.location {
+  position: absolute;
+  bottom: 40px;
+  color: #fff;
+}
+
+.location{
+  right: 0;
+  text-transform: uppercase;
+  img{
+    margin-bottom: 15px;
+  }
+}
+
+// index
+
+.title{
+  color: #fff;
+}
+
+.title h2::before{
+  content: url(../images/pointer.png);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.title h2{
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.quests{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.quest-card-wrapper{
+  width: 570px;
+  margin-top: 30px;
+}
+
+.quest-card-wrapper:nth-child(odd) {
+    margin-right: 30px;
+}
+
+.marker{
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 410px;
+  width: 110px;
+  padding: 7px 25px;
+  border-radius: 10px 10px 0 0;
+  background: $dark-purple;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: $main-blue;
+}
+
+.marker img{
+  float: left;
+  margin-right: 7px;
+}
+
+.quest-card-content{
+  width: calc(100% - 100px);
+  padding: 55px 50px 25px 50px;
+  background: $dark-purple url(../images/book.png) no-repeat 455px 55px;
+  border-radius: 10px 0 10px 10px;
+}
+
+.quest-card-content h1{
+  font-size: 48px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+.quest-card-content p{
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.quest-card-image{
+  margin: 40px 0 30px -50px;
+  width: 570px;
+}
+
+.index-book-button,
+.unactive-button {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 120px;
+  line-height: 23px;
+  padding: 10px 15px;
+  margin-right: 35px;
+  border-radius: 10px;
+  background: $main-blue;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  p{
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.unactive{
+  margin-top: 36px;
+  border-radius: 10px;
+}
+
+.unactive-button{
+  background: #2e2a3c;
+  color: $plum;
+}
+
+.index-book-button:hover{
+  background: $main-red;
+}
+
+.index-book-button img{
+  float: left;
+  margin-right: 10px;
+}
+
+.more-info,
+.more-quests a {
+  display: inline-block;
+  line-height: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 6px solid $plum;
+}
+
+.more-quests{
+  width: 100%;
+  margin: 40px 0 60px 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+.more-info:hover,
+.more-quests a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+// offers
+
+.offers{
+  display: flex;
+  position: relative;
+  z-index: 1;
+  width: 1170px;
+  margin: 60px auto 0 auto;
+}
+
+.offer{
+  width: 210px;
+  background: $dark-purple;
+  padding: 25px 30px 0 30px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.offers .offer:not(:last-child){
+  margin-right: 30px;
+}
+
+.offer h1{
+  margin-bottom: 25px;
+  line-height: 1.3em;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.price{
+  font-size: 48px;
+  color: $main-red;
+  margin-bottom: 5px;
+}
+
+.offer span{
+  color: #fff;
+}
+
+.offer .italic{
+  margin-bottom: 25px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.price-each{
+  width: 270px;
+  margin: 15px -30px;
+  padding: 10px 0;
+  font-size: 18px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.time{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.image-block{
+  width: 116px;
+  height: 116px;
+  margin: 5px auto;
+  background: url(../images/team.png);
+  background-position: top;
+}
+
+.offer button{
+  cursor: pointer;
+  width: 270px;
+  margin-left: -30px;
+  padding: 25px 0;
+  background: $main-blue;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.offer:hover{
+  background: $main-blue;
+  color: #fff;
+  box-shadow: 0px 0px 75px rgba(75, 163, 245, 0.2);
+}
+
+.offer:hover .price{
+  color: #fff;
+}
+
+.offer:hover .image-block{
+  background-position: bottom;
+}
+
+.offer:hover button{
+  background: $main-red;
+}
+
+// end
+
+.big-title{
+  height: 460px;
+  margin-top: 60px;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.big-title h1{
+  font-size: 72px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.big-book-button{
+  cursor: pointer;
+  padding: 20px 35px;
+  margin-top: 85px;
+  background-color: $main-red;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.big-book-button p{
+  margin-right: 10px;
+}
+
+.big-book-button p,
+.big-book-button img{
+  display: inline;
+}
+
+.big-book-button:hover{
+  background: $main-blue;
+}
+
+// footer
+
+.footer{
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+  width: 1170px;
+  margin: 50px auto;
+}
+
+.first-row{
+  width: 16%;
+}
+
+.second-row{
+  width: 36%;
+}
+
+.third-row{
+  width: 48%;
+  text-align: right;
+}
+
+.footer img{
+  width: 125px;
+}
+
+.footer p{
+  font: normal 14px 'Roboto Condensed', sans-serif;
+  margin-top: 10px;
+}
+
+.footer li{
+  display: inline-block;
+  width: 30%;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}

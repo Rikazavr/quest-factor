@@ -1,0 +1,82 @@
+$main-text: #5d5778;
+$main-blue: #4ba3f5;
+$main-red: #fc2f56;
+$dark-purple: #1a1822;
+$plum: #5d5778;
+
+
+.slider{
+    position: relative;
+    z-index: 1;
+    margin: -190px auto -500px auto;
+    max-width: 1920px;
+    width: 95%;
+    height: 950px;
+    padding-top: 210px;
+    background: url(../images/slider.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.slider-content{
+    position: relative;
+    z-index: 1;
+    width: 1170px;
+    margin: 30px auto 120px auto;
+    color: #fff;
+    font-weight: bold;
+}
+
+.slider-content p{
+    line-height: 1.3em;
+}
+
+.slider-content a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 90px;
+    color: #16141d;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2px rgba(255,255,255, 0.17);
+}
+
+// привет, костыли
+
+// .slider-content h1{
+//     font-size: 90px;
+//     text-transform: uppercase;
+//     color: rgba(0,0,0,0.6);
+//     text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+// }
+
+// .inset-text-effect {
+//   display: inline-block;
+//   -webkit-box-sizing: content-box;
+//   -moz-box-sizing: content-box;
+//   box-sizing: content-box;
+//   border: none;
+//   color: rgba(22,20,19,1);
+//   text-align: center;
+//   font-size: 90px;
+//   text-transform: uppercase;
+//   -o-text-overflow: clip;
+//   text-overflow: clip;
+//   white-space: pre;
+//   text-shadow: 1px 1px 2px rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
+// }
+
+.slider-content p{
+    width: 20%;
+}
+
+.slider-content h2{
+    margin-top: 25px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $main-red;
+    text-shadow: 0px 0px 15px $main-red;
+    span{
+        color: $main-blue;
+        text-shadow: 0px 0px 15px $main-blue;
+    }
+}
