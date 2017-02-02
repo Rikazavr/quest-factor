@@ -5,33 +5,58 @@ $dark-purple: #1a1822;
 $plum: #5d5778;
 
 
-.slider{
-    position: relative;
-    z-index: 1;
-    margin: -190px auto -500px auto;
-    max-width: 1920px;
-    width: 95%;
-    height: 950px;
-    padding-top: 210px;
-    background: url(../images/slider.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+.main-slider {
+  
 }
 
-.slider-content{
-    position: relative;
+.slick-arrow{
+  height: 80%;
+  width: 100px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.slick-arrow:focus {
+  outline: none;
+}
+
+.slick-prev{
+  position: absolute;
+  z-index: 5;
+  background: url(../images/arrow-left.png) no-repeat center;
+}
+
+.slick-next{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../images/arrow-right.png) no-repeat center;
+}
+
+.main-slider img{
+  height: 100%;
+}
+
+.slide-info{
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    margin-left: -585px;
     z-index: 1;
     width: 1170px;
-    margin: 30px auto 120px auto;
     color: #fff;
     font-weight: bold;
 }
 
-.slider-content p{
+.slide-info p{
     line-height: 1.3em;
+    letter-spacing: 0.05em;
 }
 
-.slider-content a{
+.slide-info a{
     display: inline-block;
     margin: 20px 0;
     font-size: 90px;
@@ -40,9 +65,25 @@ $plum: #5d5778;
     text-shadow: 0px 1px 2px rgba(255,255,255, 0.17);
 }
 
+.slide-info p{
+    width: 20%;
+}
+
+.slide-info h2{
+    margin-top: 25px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $main-red;
+    text-shadow: 0px 0px 15px $main-red;
+    span{
+        color: $main-blue;
+        text-shadow: 0px 0px 15px $main-blue;
+    }
+}
+
 // привет, костыли
 
-// .slider-content h1{
+// .slide-info h1{
 //     font-size: 90px;
 //     text-transform: uppercase;
 //     color: rgba(0,0,0,0.6);
@@ -64,19 +105,3 @@ $plum: #5d5778;
 //   white-space: pre;
 //   text-shadow: 1px 1px 2px rgba(140,140,140,0.6) , -1px -1px 1px rgba(0,0,0,0.67) ;
 // }
-
-.slider-content p{
-    width: 20%;
-}
-
-.slider-content h2{
-    margin-top: 25px;
-    font-size: 48px;
-    text-transform: uppercase;
-    color: $main-red;
-    text-shadow: 0px 0px 15px $main-red;
-    span{
-        color: $main-blue;
-        text-shadow: 0px 0px 15px $main-blue;
-    }
-}

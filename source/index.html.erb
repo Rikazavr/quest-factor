@@ -4,12 +4,33 @@ title: quest factor
 
 <!--slider-->
 
-<div class="slider">
-    <div class="slider-content">
-        <p>quest</p>
-        <a href="">title</a>
-        <p>Only today -30% off sale for LIBRARY quest Call your friend and welcome!</p>
-        <h2>sale <span class="">-30%</span></h2>
+<div class="main-slider">
+    <div>
+        <img src="images/slider.png">
+        <div class="slide-info">
+            <p>quest</p>
+            <a href="">title</a>
+            <p>Only today -30% off sale for LIBRARY quest Call your friend and welcome!</p>
+            <h2>sale <span class="">-30%</span></h2>
+        </div>
+    </div>
+    <div>
+        <div class="slide-info">
+            <p>quest</p>
+            <a href="">title</a>
+            <p>Only today -30% off sale for LIBRARY quest Call your friend and welcome!</p>
+            <h2>sale <span class="">-30%</span></h2>
+        </div>
+        <img src="images/slider.png">
+    </div>
+    <div>
+        <div class="slide-info">
+            <p>quest</p>
+            <a href="">title</a>
+            <p>Only today -30% off sale for LIBRARY quest Call your friend and welcome!</p>
+            <h2>sale <span class="">-30%</span></h2>
+        </div>
+        <img src="images/slider.png">
     </div>
 </div>
 
@@ -22,7 +43,7 @@ title: quest factor
 <section class="quests">
     <div class="quest-card-wrapper">
         <div class="marker">
-            <img src="images/user-icon.png" alt="">
+            <!--<img src="images/user-icon.png" alt="">-->
             <p>2 — 8 players</p>
         </div>
         <div class="quest-card-content">
@@ -41,7 +62,7 @@ title: quest factor
     </div>
     <div class="quest-card-wrapper">
         <div class="marker">
-            <img src="images/user-icon.png" alt="">
+            <!--<img src="images/user-icon.png" alt="">-->
             <p>2 — 8 players</p>
         </div>
         <div class="quest-card-content">
@@ -60,8 +81,8 @@ title: quest factor
     </div>
     <div class="quest-card-wrapper">
         <div class="marker">
-            <img src="images/user-icon.png" alt="">
-            <p>2 — 8 players</p>
+            <!--<img src="images/user-icon.png" alt="">-->
+            <p>4 — 12 players</p>
         </div>
         <div class="quest-card-content">
             <a href="#">
@@ -78,6 +99,10 @@ title: quest factor
         </div>
     </div>
     <div class="quest-card-wrapper">
+        <div class="marker">
+            <!--<img src="images/user-icon.png" alt="">-->
+            <p>2 — 8 players</p>
+        </div>
         <div class="quest-card-content unactive">
             <a href="#">
                 <h1>Secrets</h1>
@@ -85,9 +110,6 @@ title: quest factor
             <p>Real life quest is game full of excitement! Discover lots of intriguing secrets and puzzles a long the way. In order to win, you must work as a team solving unique challenges.</p>
             <img src="images/three-from-five.png" alt="">
             <img src="images/0001.jpg" class="quest-card-image" alt="">
-            <div class="unactive-button" href="#">
-                <p>coming soon</p>
-            </div>
         </div>
     </div>
 </section>
@@ -152,3 +174,13 @@ title: quest factor
         <img src="images/gamepad.png">
     </button>
 </div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="javascripts/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.main-slider').slick({
+      autoplay: true
+    });
+  });
+</script>

@@ -9,16 +9,17 @@
     <title><%= current_page.data.title || "Middleman" %></title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" rel="stylesheet">
-
-    <%= stylesheet_link_tag :site %>
-    <%= javascript_include_tag :all %>
-    <%= stylesheet_link_tag :slider %>
     
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+    <%= stylesheet_link_tag :slider %>
+    <%= stylesheet_link_tag :slick %>
+    
   </head>
 
-  <body class="<%= page_classes %>">
+  <body>
     
     <div class="stripes">
       <div class="stripe"></div>
@@ -32,13 +33,13 @@
     <nav class="main-menu">
       <ul>
         <li>
-          <a href="#">home</a>
+          <a href="index.html">home</a>
         </li>
         <li>
-          <a href="#">contacts</a>
+          <a href="contacts.html">contacts</a>
         </li>
         <li>
-          <a href="#">games</a>
+          <a href="quests.html">games</a>
         </li>
         <li>
           <a href="#">map</a>
@@ -52,7 +53,7 @@
         <p>+7 (495) 540-53-97</p>
       </div>
         <img src="../images/logo.png">
-        <p class="neon">quest is a game</p>
+        <p class="neon">escape reality</p>
       <div class="location">
         <img src="../images/location.png">
         <p>seattle</p>
