@@ -4,11 +4,11 @@
 
 // colors
 
-$main-text: #5d5778;
+$main-text: #8d83b5;
 $main-blue: #4ba3f5;
 $main-red: #fc2f56;
 $dark-purple: #1a1822;
-$plum: #5d5778;
+$plum: #8d83b5;
 
 // end
 
@@ -29,6 +29,11 @@ h1{
   margin: 0;
 }
 
+.mobile-menu,
+.current-city{
+  display: none;
+}
+
 .stripes{
   position: fixed;
   display: flex;
@@ -37,7 +42,12 @@ h1{
   z-index: 0;
 }
 
-// убрать при ширине меньше 1170
+@media (max-width: 1170px) { 
+  .stripes{
+    display: none;
+  }
+}
+
 .stripe{
   height: 100%;
   width: 16.5%;
@@ -137,8 +147,6 @@ h1{
 .quests{
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
-  // align-content: flex-start;
   position: relative;
   z-index: 1;
   width: 1170px;
@@ -166,7 +174,8 @@ h1{
   color: $main-blue;
 }
 
-.marker p::before{
+.marker p::before,
+.players p::before{
   content: url(../images/user-icon.png);
   display: inline-block;
   vertical-align: middle;
@@ -200,10 +209,10 @@ h1{
 .index-book-button{
   display: inline-block;
   vertical-align: bottom;
-  width: 120px;
   line-height: 23px;
   padding: 10px 15px;
   margin-right: 35px;
+  border: none;
   border-radius: 10px;
   background: $main-blue;
   font-family: 'Roboto Condensed', sans-serif;
@@ -211,14 +220,21 @@ h1{
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
-  p{
-    margin: 0;
-    width: 100%;
-  }
+}
+
+.index-book-button p{
+  margin: 0;
+  width: 100%
+}
+
+.index-book-button p:before{
+  content: url(../images/cart.png);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .unactive{
-  // margin-top: 36px;
   border-radius: 10px 0 10px 10px;
 }
 
@@ -232,7 +248,8 @@ h1{
 }
 
 .more-info,
-.more-quests a {
+.more-quests a,
+.next-quest a{
   display: inline-block;
   line-height: 1.5em;
   font-weight: 900;
@@ -248,7 +265,8 @@ h1{
 }
 
 .more-info:hover,
-.more-quests a:hover {
+.more-quests a:hover,
+.next-quest a:hover{
   color: #fff;
   border-color: #fff;
 }
@@ -355,7 +373,7 @@ h1{
 
 // end
 
-.big-title{
+.basement{
   // height: 460px;
   height: 530px;
   margin-bottom: -70px;
@@ -364,7 +382,7 @@ h1{
   text-align: center;
 }
 
-.big-title h1{
+.basement h1{
   font-size: 72px;
   text-transform: uppercase;
   color: #fff;
@@ -445,4 +463,258 @@ h1{
 
 .all-quests-margin{
   margin-top: 60px;
+}
+
+// contacts page
+
+.contacts-wrapper{
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.info,
+.form-wrapper{
+  height: 405px;
+  background: $dark-purple;
+  border-radius: 15px;
+}
+
+.info h1,
+.form-wrapper h1{
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.info{
+  width: 470px;
+  margin-right: 30px;
+  padding: 50px 50px 30px 50px;
+  p {
+    font-size: 18px;
+  }
+}
+
+.info li{
+  display: flex;
+  margin-top: 40px;
+}
+
+.info img{
+  margin-right: 15px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+// contact page form
+
+.form-wrapper{
+  position: relative;
+  width: 510px;
+  padding: 50px 30px 30px 30px;
+  h1{
+    color: $main-blue;
+  }
+}
+
+.cpform{
+  margin-top: 30px;
+}
+
+.cpform input {
+  margin-bottom: 20px;
+  background: none;
+  border-radius: 10px;
+  border: 1px solid $plum;
+  color: $plum;
+  padding: 10px 20px;
+}
+
+.cpform input[name="subject"] {
+  width: calc(100% - 42px);
+}
+
+.cpform input[name="name"] {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.cpform input[name="email"] {
+  width: 200px;
+}
+
+.cpform textarea[type="textarea"] {
+  resize: none;
+  width: calc(100% - 42px);
+  height: 90px;
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid $plum;
+  border-radius: 10px;
+  color: $plum;
+}
+
+.cpform input[type="submit"] {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  margin: 0;
+  padding: 15px 55px;
+  border: none;
+  border-radius: 10px;
+  background-color: $main-blue;
+  font: normal 16px 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.cpform input[type="submit"]:hover{
+  cursor: pointer;
+}
+
+// map
+
+  #map{
+    width: 1170px;
+    height: 510px;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
+// end
+
+// single quest page
+
+.quest-slider-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 585px);
+  z-index: 3;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.quest-slider-info div{
+  width: 60%;
+}
+
+.quest-slider-info ul{
+}
+
+.quest-slider-info li{
+  display: inline-block;
+  vertical-align: middle;
+  font: bold 16px 'Roboto Condensed', sans-serif;
+  text-align: right;
+}
+
+.quest-slider-info li:not(:first-child){
+  margin-left: 30px;
+  padding-left: 30px;
+}
+
+.quest-slider-info li:first-child{
+  color: $main-red;
+  text-transform: uppercase;
+}
+
+.players{
+  color: $main-blue;
+  text-transform: uppercase;
+}
+
+.quest-slider-info h1{
+  font-size: 89px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.quest-slider-info h2{
+  font-size: 48px;
+  text-transform: uppercase;
+  color: $main-red;
+  text-shadow: 0px 0px 15px $main-red;
+  span{
+      color: $main-blue;
+      text-shadow: 0px 0px 15px $main-blue;
+  }
+}
+
+.quest-info-wrapper{
+  position: relative;
+  z-index: 1;
+  width: 1070px;
+  margin: 0 auto 40px auto;
+  padding: 30px 50px 50px 50px;
+  border-radius: 0 0 10px 10px;
+  background: $dark-purple;
+}
+
+.quest-info-wrapper:after{
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.description{
+  float: left;
+  width: 630px;
+  p{
+    line-height: 1.3em;
+  }
+}
+
+.quest-info{
+  float: right;
+  width: 360px;
+  color: #fff;
+}
+
+.quest-info-list{
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-top: 1px solid $plum;
+  border-bottom: 1px solid $plum;
+}
+
+.quest-info-list li{
+  display: flex;
+  margin-top: 30px;
+}
+
+.quest-info-list img{
+  margin-right: 15px;
+}
+
+.age{
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: $main-red;
+}
+
+.social{
+  display: inline;
+  float: right;
+}
+
+.social li{
+  display: inline-block;
+  margin: 0;
+}
+
+.social img{
+  margin-left: 15px;
+}
+
+.next-quest{
+  padding-bottom: 20px;
+  text-align: right;
 }

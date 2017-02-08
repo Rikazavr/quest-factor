@@ -1,0 +1,414 @@
+// colors
+
+$main-text: #8d83b5;
+$main-blue: #4ba3f5;
+$main-red: #fc2f56;
+$dark-purple: #1a1822;
+$plum: #8d83b5;
+
+@media (max-width: 599px) { 
+    
+    html{
+        background-image: none;
+        background-color: #1e1c28;
+        background: linear-gradient(to bottom, #371e2d, #1e1c28);
+    }
+    
+    body{
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .header,
+    .main-menu,
+    .main-slider,
+    .quest-slider{
+        display: none;
+    }  
+    
+    .container,
+    .header,
+    .quests,
+    .offers{
+      width: 100vw;
+      margin: 0;
+      flex-direction: column;
+    }
+    
+    .mobile-menu{
+        display: block;
+        position: relative;
+    }
+    
+    .mobile-logo{
+        display: block;
+        height: 65px;
+    }
+    
+    #toggle{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65px;
+        height: 65px;
+        background: url(../images/burger.png) center no-repeat;
+        border: 1px solid red;
+    }
+    
+    .current-city{
+        display: block;
+        line-height: 3em;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        border-top: 1px solid $plum;
+        border-bottom: 1px solid $plum;
+    }
+    
+    .title{
+        width: 100%;
+        margin-bottom: 30px;
+        line-height: 4em;
+        text-align: center;
+        background: #302a4a;
+    }
+    
+    .more-quests{
+        margin: 0 0 30px 0;
+    }
+    
+    #map{
+        width: 100%;
+        height: 510px;
+        margin: 0;
+        border-radius: none;
+        margin-bottom: 30px;
+    }
+    
+    // popular quests
+    
+    .quest-card-wrapper{
+        width: 90%;
+        margin: 0 5% 30px 5%;
+    }
+    
+    .marker{
+        left: 0;
+        width: 170px;
+        padding: 7px 0px;
+        text-align: center;
+    }
+    
+    .quest-card-content{
+        width: calc(100% - 60px);
+        padding: 30px;
+        background: $dark-purple url(../images/book.png) no-repeat 455px 55px;
+        border-radius: 0 10px 10px 10px;
+    }
+    
+    .quest-card-content p{
+        width: 100%;
+    }
+    
+    .quest-card-image{
+        margin: 30px 0 30px -30px;
+        width: calc(100% + 60px);
+    }
+    
+    .quest-card-content .index-book-button{
+        position: relative;
+        left: calc(50% - 67px);
+    }
+    
+    .quest-card-content .more-info{
+        display: block;
+        width: 96px;
+        margin: 20px auto 0 auto;
+    }
+    
+    // offers
+    
+    .offers{
+        margin: 0;
+        align-items: center;
+    }
+    
+    .offers .offer:not(:last-child){
+        margin-right: 0;
+    }
+
+    .offer{
+        margin-bottom: 30px;
+    }
+    
+    // single quest page
+    
+    .quest-slider-info{
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100vw;
+        margin: 0;
+        background: url(../images/slider.png) center no-repeat;
+        background-size: cover;
+    }
+    
+    .quest-slider-info div{
+        width: calc(100% - 60px);
+        padding: 30px;
+        h1{
+            font-size: 3.2em;
+        }
+        h2{
+            font-size: 2em;
+        }
+    }
+    
+    .quest-slider-info ul{
+        width: calc(100% - 60px);
+        padding: 30px;
+    }
+    
+    .quest-slider-info li{
+        display: block;
+        vertical-align: left;
+        text-align: left;
+    }
+    
+    .quest-slider-info li:not(:first-child){
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    .quest-slider-info li:not(:last-child){
+        width: 50%;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $plum;
+    }
+    
+    .quest-info-wrapper{
+        width: calc(100% - 60px);
+        margin: 0;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .description{
+        float: none;
+        width: 100%;
+    }
+    
+    .quest-info{
+        float: none;
+        width: 100%;
+    }
+    
+    .quest-info-list{
+        margin: 30px 0;
+        padding-bottom: 20px;
+    }
+    
+    .quest-info-list li{
+        display: block;
+    }
+    
+    .quest-info-list img{
+        float: left;
+    }
+    
+    .quest-info .index-book-button{
+        position: relative;
+        left: calc(50% - 67px);
+    }
+    
+    .social{
+        display: none;
+    }
+    
+    .next-quest{
+        display: none;
+    }
+    
+    // contacts
+    .contacts-wrapper{
+        flex-direction: column;
+        width: 100vw;
+    }
+    
+    .info,
+    .form-wrapper{
+        height: auto;
+    }
+    
+    .info h1,
+    .form-wrapper h1{
+        font-size: 2em;
+    }
+    
+    .info{
+        width: calc(100% - 60px);
+        margin: 30px 0;
+        padding: 30px;
+    }
+    
+    .info li{
+        display: block;
+        margin-top: 30px;
+    }
+    
+    .info img{
+        float: left;
+    }
+    
+    .form-wrapper{
+        width: calc(100% - 60px);
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .cpform{
+        margin-top: 0;
+    }
+    
+    .cpform input[name="subject"] {
+        width: calc(100% - 42px);
+        margin-top: 30px;
+    }
+    
+    .cpform input[name="name"] {
+        width: calc(100% - 42px);
+        margin-right: 0;
+    }
+    
+    .cpform input[name="email"] {
+        width: calc(100% - 42px);
+    }
+
+    .cpform input[type="submit"] {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 20px;
+    }
+
+    // bottom
+    
+    .basement{
+        width: calc(100% - 60px);
+        height: auto;
+        padding: 50px 30px;
+        h1{
+            font-size: 3em;
+        }
+    }
+    
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        margin: 0;
+        padding-bottom: 15px;
+        text-align: center;
+        .third-row{
+            display: none;
+        }
+    }
+    
+    .first-row,
+    .second-row{
+        width: 100%;
+    }
+    
+}
+
+// mobile menu
+
+.mobile-menu{
+    
+}
+
+.mobile-menu:after{
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.mobile-menu .logo{
+    display: inline-block;
+    float: left;
+    height: 65px;
+    width: calc(100% - 65px);
+    background: url(../images/mobile-logo.png) left no-repeat;
+}
+
+#menu-button {
+    display: block;
+    width: 65px;
+    height: 65px;
+    position: relative;
+    z-index: 7;
+    float: right;
+}
+
+#menu-button:after {
+  position: absolute;
+  content: "☰";
+  font-size: 32px;
+  color: #FFF;
+  width: 65px;
+  height: 65px;
+  text-align: center;
+  line-height: 65px;
+}
+
+#menu-button.on:after {
+  content: "x";
+}
+
+#overlay {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#overlay.open {
+  display: block;
+}
+
+#hamburger-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 7;
+    height: 0;
+    width: 0;
+    background: #23b3fd;
+    overflow: hidden;
+}
+
+#hamburger-menu nav a {
+    display: block;
+    padding: 15px;
+    line-height: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #0192cf;
+}

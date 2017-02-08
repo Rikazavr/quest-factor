@@ -1,0 +1,290 @@
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+    
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{    
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    position: relative;
+    
+    display: none;
+    float: left;
+    
+    width: 100%;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-current{
+   width: 100%; 
+}
+
+/*
+    my styles
+*/
+
+$main-blue: #4ba3f5;
+$main-red: #fc2f56;
+
+
+.slick-arrow{
+  height: 80%;
+  width: 100px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.slick-arrow:focus {
+  outline: none;
+}
+
+.slick-prev{
+  position: absolute;
+  z-index: 3;
+  background: url(../images/arrow-left.png) no-repeat center;
+}
+
+.slick-next{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  background: url(../images/arrow-right.png) no-repeat center;
+}
+
+@media (max-width: 1360px) {
+    .slick-arrow{
+      height: 65%;
+      width: 100px;
+      padding: 0;
+      background: none;
+    }
+    
+    .slick-prev{
+      position: absolute;
+      right: 100px;
+      z-index: 3;
+      background: url(../images/arrow-left.png) no-repeat bottom;
+    }
+    
+    .slick-next{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      background: url(../images/arrow-right.png) no-repeat bottom;
+    }
+    
+    .main-slider img{
+        width: 120%;
+    }
+
+}
+
+    // main page slider
+
+.main-slider {
+    width: 100%;
+    height: 900px;
+    margin: -205px auto -230px auto;
+}
+
+.main-slider img{
+    height: 100%;
+}
+
+.slide-info{
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    margin-left: -585px;
+    z-index: 1;
+    width: 1170px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.slide-info p{
+    line-height: 1.3em;
+    letter-spacing: 0.05em;
+}
+
+.slide-info a{
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 90px;
+    color: #16141d;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2px rgba(255,255,255, 0.17);
+}
+
+.slide-info p{
+    width: 20%;
+}
+
+.slide-info h2{
+    margin-top: 25px;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $main-red;
+    text-shadow: 0px 0px 15px $main-red;
+    span{
+        color: $main-blue;
+        text-shadow: 0px 0px 15px $main-blue;
+    }
+}
+
+
+
+// quest page slider
+    
+
+.slider-wrapper{
+    position: relative;
+}
+
+.quest-slider{
+    height: 780px;
+    width: 100%;
+    margin-top: -205px;
+    overflow: hidden;
+}
+
+@media (max-width: 1360px) {
+    .quest-slider{
+        height: 680px;
+        // height: calc(100vh - 40px);
+    }
+}
+
+.quest-slider img{
+    height: 100%;
+}
+
+.quest-slider:before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to bottom, rgba(24, 22, 34, 1), rgba(255,0,0,0));
+}
+
+.quest-slider:after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(24, 22, 34, 1));
+}
+

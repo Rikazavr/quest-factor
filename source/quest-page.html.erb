@@ -1,0 +1,139 @@
+---
+title: quest name
+---
+
+<!--slider-->
+
+<div class="slider-wrapper">
+    <div class="quest-slider-info">
+        <div>
+            <h2>sale <span class="">-30%</span></h2>
+            <h1>the castle</h1> 
+        </div>
+        <ul>
+            <li>
+                <p>1 hour</p>
+            </li>
+            <li class="players">
+                <p>2 — 8 players</p>
+            </li>
+            <li>
+                <img src="images/three-from-five.png">
+                <p>very difficult</p>
+            </li>
+        </ul>
+    </div>
+    <div class="quest-slider">
+        <div>
+            <img src="images/castle.jpg">
+        </div>
+        <div>
+            <img src="images/castle.jpg">
+        </div>
+        <div>
+            <img src="images/castle.jpg">
+        </div>
+    </div>
+</div>
+
+<!--slider end-->
+
+<div class="quest-info-wrapper">
+    <div class="next-quest">
+        <a href="#">next quest</a>
+    </div>
+    <div class="description">
+        <p>Take part in the amazing castle experience and unlock its hidden secrets. You are a band of explorers looking to find the legendary lost treasure of the templars! You have one hour to find the treasure or the spirit of the last knight wins. Are you up for the challenge?</p>
+    </div>
+    <div class="quest-info">
+        <ul class="quest-info-list">
+            <li>
+               <img src="images/location-small.png">
+                <p>1 Infinite Loop Cupertino, CA 95014</p> 
+            </li>
+            <li>
+                <img src="images/phone-small.png">
+                <p>408-996-1010</p>
+            </li>
+            <li>
+                <img src="images/mail.png">
+                <a href="mailto:quest@gmail.com">quest@gmail.com</a>
+            </li>
+            <li>
+                <p><span class="age">age:</span> 12+</p>
+            </li>
+        </ul>
+        <button class="index-book-button"><p>Book now</p></button>
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <img src="images/instagram.png">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/facebook.png">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/twitter.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="title">
+    <h2>this quest location</h2>
+</div>
+
+<!-- 
+    After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+-->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+
+        var mapOptions = {
+            
+            zoom: 11,
+
+            center: new google.maps.LatLng(40.6700, -73.9400),
+
+            styles: [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":30},{"gamma":0.5},{"hue":"#00aaff"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"saturation":"100"},{"lightness":"27"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#32373c"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"saturation":"100"},{"lightness":"69"},{"gamma":"1.40"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"lightness":"100"},{"saturation":"100"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"saturation":"100"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"saturation":"43"},{"lightness":"51"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"saturation":"45"},{"lightness":"19"}]}]
+        };
+
+        var mapElement = document.getElementById('map');
+
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(40.6700, -73.9400),
+            map: map,
+            title: 'Snazzy!'
+        });
+    }
+</script>
+
+<div id="map" style="margin-top:30px;"></div>
+
+<div class="container more-quests">
+    <a href="quests.html">more quests</a>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="javascripts/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.quest-slider').slick({
+      autoplay: false
+    });
+  });
+</script>
