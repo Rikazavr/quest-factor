@@ -1,5 +1,9 @@
 $(document).ready(function ($) {
-
+    
+    $('.location-selector button#dropdown').click(function(e) {
+      $('.locations-dropdown').slideToggle(200, function() {});
+  	});
+    
     //hamburger
     
     $(function(){

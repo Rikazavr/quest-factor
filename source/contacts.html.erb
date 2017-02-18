@@ -7,16 +7,16 @@ title: contacts
         <h1>Information</h1>
         <ul>
             <li>
-               <img src="images/location-small.png">
-                <p>adress: <span class="bold">1 Infinite Loop Cupertino, CA 95014</span></p> 
+               <img src="images/location-small.png" style="height:22px;">
+                <p>adress: <span class="bold">140 University Way NE, Seattle, WA 98105</span></p> 
             </li>
             <li>
                 <img src="images/phone-small.png">
-                <p>phone: <span class="bold">408-996-1010</span></p>
+                <p>phone: <span class="bold">+1 (929) 277-70-60</span></p>
             </li>
             <li>
                 <img src="images/mail.png">
-                <p>email: <a href="mailto:quest@gmail.com" class="bold">quest@gmail.com</a></p>
+                <p>email: <a href="mailto:quest@gmail.com" class="bold">questfactory.seattle@gmail.com</a></p>
             </li>
         </ul>
     </div>
@@ -32,10 +32,9 @@ title: contacts
     </div>
 </div>
 
-    <!-- 
-        After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
-            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
-    -->
+    
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAielnWm_ijXZYu5MclQ8tAGumFcTXpYZQ"></script-->
+            
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     
     <script type="text/javascript">
@@ -45,9 +44,9 @@ title: contacts
 
             var mapOptions = {
                 
-                zoom: 11,
-    
-                center: new google.maps.LatLng(40.6700, -73.9400),
+                zoom: 19,
+                scrollwheel: false,
+                center: new google.maps.LatLng(47.65805839999999, -122.31289070000003),
     
                 styles: [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":30},{"gamma":0.5},{"hue":"#00aaff"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"saturation":"100"},{"lightness":"27"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#32373c"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"saturation":"100"},{"lightness":"69"},{"gamma":"1.40"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"lightness":"100"},{"saturation":"100"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"saturation":"100"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"saturation":"43"},{"lightness":"51"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"saturation":"45"},{"lightness":"19"}]}]
             };
@@ -55,11 +54,19 @@ title: contacts
             var mapElement = document.getElementById('map');
     
             var map = new google.maps.Map(mapElement, mapOptions);
+            
+            var image = new google.maps.MarkerImage('images/location-small.png',      
+        		new google.maps.Size(32, 32),      
+              	new google.maps.Point(0,0),      
+              	new google.maps.Point(0, 24)); 
+            
     
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
+                position: new google.maps.LatLng(47.65805839999999, -122.31289070000003),
                 map: map,
-                title: 'Snazzy!'
+                icon: image,
+                title: 'adress'
+      	
             });
         }
     </script>

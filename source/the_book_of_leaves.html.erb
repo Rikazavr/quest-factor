@@ -1,0 +1,123 @@
+---
+title: the book of leaves
+---
+
+<!--slider-->
+
+<div class="slider-wrapper">
+    <div class="quest-slider-info">
+        <div>
+            <h2>sale <span class="">-30%</span></h2>
+            <h1>the book of leaves</h1> 
+        </div>
+        <ul>
+            <li>
+                <p>1 hour</p>
+            </li>
+            <li class="players">
+                <p>2 — 8 players</p>
+            </li>
+            <li>
+                <img src="images/four-from-five.png">
+                <p>very difficult</p>
+            </li>
+        </ul>
+    </div>
+    <div class="quest-slider-image quest-slider">
+        <div>
+            <img src="images/0002.jpg">
+        </div>
+        
+    </div>
+</div>
+
+<!--slider end-->
+
+<div class="quest-info-wrapper">
+    <div class="next-quest">
+        <a href="the_castle.html">next quest</a>
+    </div>
+    <div class="description">
+       <p>As a group of historians and amateur cryptologists you discover a secret workshop that belonged to famous Leonardo Da Vinci. It is beleived by many mythologists that before his death, Leonardo hid mysterious artifact called Book of Leaves in his secret chamber. Now your group is just few steps away from discovering this relic.</p>
+    </div>
+    <div class="quest-info">
+        <ul class="quest-info-list">
+            <li>
+               <img src="images/location-small.png" style="height:22px;">
+                <p>140 University Way NE, Seattle, </br>WA 98105</p> 
+            </li>
+            <li>
+                <img src="images/phone-small.png">
+                <p>+1 (929) 277-70-60</p>
+            </li>
+            <li>
+                <img src="images/mail.png">
+                <a href="mailto:quest@gmail.com">questfactory.seattle@gmail.com</a>
+            </li>
+            <li>
+                <p><span class="age">age:</span> 12+</p>
+            </li>
+        </ul>
+        <a class="index-book-button" href="http://bookeo.com/conundroomseattle?type=41556HEX4RT159802DB931&source=questfactor"><p>Presail</p></a>
+        <ul class="social">
+            <li>
+                <a href="https://www.facebook.com/Questfactor.us">
+                    <img src="images/facebook.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="title">
+    <h2>this quest location</h2>
+</div>
+
+<!-- 
+    After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+-->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script type="text/javascript">
+        google.maps.event.addDomListener(window, 'load', init);
+    
+        function init() {
+
+            var mapOptions = {
+                
+                zoom: 19,
+                scrollwheel: false,
+                center: new google.maps.LatLng(47.65805839999999, -122.31289070000003),
+    
+                styles: [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":30},{"gamma":0.5},{"hue":"#00aaff"}]},{"featureType":"administrative.province","elementType":"geometry.stroke","stylers":[{"saturation":"100"},{"lightness":"27"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#32373c"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"saturation":"100"},{"lightness":"69"},{"gamma":"1.40"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"lightness":"100"},{"saturation":"100"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"saturation":"100"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"saturation":"43"},{"lightness":"51"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"saturation":"45"},{"lightness":"19"}]}]
+            };
+    
+            var mapElement = document.getElementById('map');
+    
+            var map = new google.maps.Map(mapElement, mapOptions);
+            
+            var image = new google.maps.MarkerImage('images/location-small.png',      
+        		new google.maps.Size(32, 32),      
+              	new google.maps.Point(0,0),      
+              	new google.maps.Point(0, 24)); 
+            
+    
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(47.65805839999999, -122.31289070000003),
+                map: map,
+                icon: image,
+                title: 'adress'
+      	
+            });
+        }
+    </script>
+
+<div id="map" style="margin-top:30px;"></div>
+
+<div class="container more-quests">
+    <!--<a href="quests.html">more quests</a>-->
+</div>
+
+

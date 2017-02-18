@@ -3,18 +3,22 @@
   <head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
-    <!--<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <meta name="description" content="Escape Rooms and Real Life Quest Games">
+    <meta name="keywords" content="real escape room in seattle, seattle escape, teambuilding, teambuilding seattle, room escape seattle, puzzle break, seattle room escape, real escape seattle, room quest seattle, puzzle room seattle, redmond escape room, washington escape room, escape room">
+    
+    <title><%= current_page.data.title %></title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700" rel="stylesheet">
     
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     
+    <%= favicon_tag 'images/favicon.ico' %>
+    
     <%= stylesheet_link_tag :site %>
     <%= stylesheet_link_tag :slick %>
     <%= stylesheet_link_tag :mobile %>
+    
     <%= javascript_include_tag :all %>
     
   </head>
@@ -42,7 +46,7 @@
           <a href="quests.html">games</a>
         </li>
         <li>
-          <a href="contacts.html">map</a>
+          <a href="map.html">map</a>
         </li>
       </ul>
     </nav>
@@ -57,7 +61,8 @@
 			<nav>
 				<a href="index.html">home</a>
 				<a href="contacts.html">contacts</a>
-				<!--<a href="quest.html">quests</a>-->
+				<a href="quests.html">quests</a>
+				<a href="map.html">map</a>
 			</nav>
 		</div>
 		<div id="overlay"></div>
@@ -71,10 +76,10 @@
     <div class="header">
       <div class="phone">
         <img src="../images/phone.png">
-        <p>+7 (495) 540-53-97</p>
+        <p>+1 (929) 277-70-60</p>
       </div>
         <img src="../images/logo.png">
-        <p class="neon">escape reality</p>
+        <p class="neon">escape rooms</p>
       <div class="location">
         <img src="../images/location.png">
         <p>seattle</p>
@@ -90,19 +95,6 @@
       <div class="second-row">
         <p>© QUEST FACTOR USA questfactory.us</p>
         <p>© QUEST FACTOR RUSSIA quest-union.ru</p>
-      </div>
-      <div class="third-row">
-        <ul>
-          <li>
-            <a href="#">become a partner</a>
-          </li>
-          <li>
-            <a href="#">careers</a>
-          </li>
-          <li>
-            <a href="#">locations</a>
-          </li>
-        </ul>
       </div>
     </div>
     
