@@ -34,15 +34,17 @@ $(document).ready(function ($) {
         if(menu_toggle == 'open') {
           overlay.addClass('open');
           button.addClass('on');
+          menu.addClass('open');
           overlay.animate({opacity: 1}, speed);
-          menu.animate({width: "100%", height: "100vh"}, speed);
+          menu.animate({width: "100%"}, speed);
         }
     
         if(menu_toggle == 'close') {
           button.removeClass('on');
           overlay.animate({opacity: 0}, speed);
           overlay.removeClass('open');
-          menu.animate({width: "0", height: 0}, speed);
+          menu.removeClass('open');
+          menu.animate({width: "0"}, speed);
         }
       }
     });
